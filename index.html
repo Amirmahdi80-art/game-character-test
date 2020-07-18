@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Character Test</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper blue">
+      <a href="#" class="brand-logo center">  Game Character Test <i class="material-icons right">videogame_asset</i></a>
+
+    </div>
+  </nav>
+  <div class="parallax-container">
+    <div class="parallax"><img style="width:100%;" src="images/background-image.jpg"></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h3 class="header">Game Character Test</h3>
+      <!-- Website Content -->
+      <div class="row">
+        <div class="col s12 m9 l10">
+          <div id="introduction" class="section scrollspy">
+            <h5>Introduction</h5>
+            <div class="container">
+              <p class="flow-text">This website helps you to know which video game character you are. There are some questions below that you need to answer to reveal your game character's identity. There are more than 30 game characters that you may
+                be one of them. </p>
+            </div>
+          </div>
+
+          <div id="structure" class="section scrollspy">
+            <h5>Psychology</h5>
+            <div class="container">
+              <p class="flow-text">Your game character will be selected for you based on your traits. There are some questions that are based on humanistic psychology. When you submit your answers, the website will analyze your answers and then
+                compare them to the moral codes of the game characters. All these characters are original video game protagonists so there are no vilians, side game characters or comic super heroes in this website. </p>
+            </div>
+          </div>
+
+          <div id="initialization" class="section scrollspy">
+            <h5>Questions</h5>
+            <div class="container">
+              <h6>Answer these 10 questions carefully.</h6>
+              <form id="form">
+                <!-- Question 1 -->
+                <p class="flow-text">1. If someone kills one of your beloved ones, Do you like to take revenge or just forgive?</p>
+                <select class="browser-default" id="q1">
+                  <option value="">Choose one of these choices</option>
+                  <option value="Vengeance">Vengeance</option>
+                  <option value="Forgiveness">Forgiveness</option>
+                </select>
+                <!-- Question 2 -->
+                <p class="flow-text">2. Are you a patient person?</p>
+                <select class="browser-default" id="q2">
+                  <option value="">Choose one of these choices</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+                <!-- Question 3 -->
+                <p class="flow-text">3. Do you like to rush into things and perform your tasks quick as quickly as possible?</p>
+                <select class="browser-default" id="q3">
+                  <option value="">Choose one of these choices</option>
+                  <option value="Fast">Keep it fast</option>
+                  <option value="Slow">Not really</option>
+                </select>
+                <!-- Question 4 -->
+                <p class="flow-text">4. Are you talkative?</p>
+                <select class="browser-default" id="q4">
+                  <option value="">Choose one of these choices</option>
+                  <option value="Talkative">Yeah, I speak a lot</option>
+                  <option value="Quiet">Not that much</option>
+                </select>
+                <!-- Question 5 -->
+                <p class="flow-text">5.In shooter video games, Which one do you prefer?</p>
+                <select class="browser-default" id="q5">
+                  <option value="">Choose one of these choices</option>
+                  <option value="Stealth">Stealth</option>
+                  <option value="Shooting">Shooting everybody</option>
+                </select>
+                <!-- Question 6 -->
+                <p class="flow-text">6. Do you usually act like the funny guy or the serious guy?</p>
+                <select class="browser-default" id="q6">
+                  <option value="">Choose one of these choices</option>
+                  <option value="Funny">I'm the funny guy</option>
+                  <option value="Serious">I don't wana be a clown</option>
+                </select>
+                <!-- Question 7 -->
+                <p class="flow-text">7. Do you consider yourself as an introvert or an extrovert?</p>
+                <select class="browser-default" id="q7">
+                  <option value="">Choose one of these choices</option>
+                  <option value="Introvert">Introvert</option>
+                  <option value="Extrovert">Extrovert</option>
+                </select>
+                <!-- Question 8 -->
+                <p class="flow-text">8. Are you bad-temper?</p>
+                <select class="browser-default" id="q8">
+                  <option value="">Choose one of these choices</option>
+                  <option value="Bad">Yes</option>
+                  <option value="Good">No</option>
+                </select>
+                <!-- Question 9 -->
+                <p class="flow-text">9. Do you take risks?</p>
+                <select class="browser-default" id="q9">
+                  <option value="">Choose one of these choices</option>
+                  <option value="risky">Yeah a lot</option>
+                  <option value="Norisky">Not that much</option>
+                </select>
+                <!-- Question 10 -->
+                <p class="flow-text">10. Do you plan ahead and analyze consequences before doing something or making decisions?</p>
+                <select class="browser-default" id="q10">
+                  <option value="">Choose one of these choices</option>
+                  <option value="plan">Of course</option>
+                  <option value="Noplan">No I rely on emotional intelligence</option>
+                </select>
+                <button class="btn waves-effect waves-light blue" type="submit" id="btn">Submit
+                  <i class="material-icons right">assignment</i>
+                </button>
+                <div id="loading-container">
+                  <img id="loading" style="width: 30vh; display:none;" src="images/loading.gif" alt="loading">
+                </div>
+                <div id="result"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col hide-on-small-only m3 l2">
+          <ul class="section table-of-contents">
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#structure">Psychology</a></li>
+            <li><a href="#initialization">Questions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img style="width:100%;" src="images/second-bg-image.jpg"></div>
+  </div>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.parallax').parallax();
+      $('select').material_select();
+    });
+  </script>
+  <script src="app.js">
+
+  </script>
+</body>
+<footer class="page-footer blue">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text center-align">Powered by A.Rasouli</h5>
+        <p class="grey-text text-lighten-4 center-align">All rights belong to the web developer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright center-align">
+    <div class="container">
+      © 2020 Copyright
+    </div>
+  </div>
+</footer>
+
+</html>
